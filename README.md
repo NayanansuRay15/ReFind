@@ -30,15 +30,6 @@ A dedicated digital hub where students can instantly report lost or found items.
 
 ---
 
-## 🛠️ Tech Stack (Suggested)
-
-* **Frontend:** React.js / Flutter (Mobile) / Tailwind CSS
-* **Backend:** Node.js (Express) / Python (FastAPI/Flask)
-* **Database:** MongoDB / PostgreSQL
-* **Storage:** Cloudinary / AWS S3 (for item images)
-
----
-
 ## 🌐 Live Website
 
 Check out the live deployment of the project here:  
