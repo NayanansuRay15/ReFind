@@ -42,4 +42,4 @@ A dedicated digital hub where students can instantly report lost or found items.
 ## 🌐 Live Website
 
 Check out the live deployment of the project here:  
-👉 **[Launch ReFind App](https://nayanansuray15.github.io/ReFind/)**
+👉 **[Launch ReFind Website](https://nayanansuray15.github.io/ReFind/)**
