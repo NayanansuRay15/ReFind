@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost & Found — Campus Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+        <circle cx="19" cy="19" r="17" stroke="#1F2620" stroke-width="2"/>
+        <circle cx="19" cy="13" r="3" fill="#1F2620"/>
+        <path d="M9 27c1.5-6 6-9 10-9s8.5 3 10 9" stroke="#1F2620" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Lost &amp; Found</h1>
+        <p>Campus board — pin what you lost or found, we'll do the matching.</p>
+      </div>
+    </div>
+    <div class="stats" id="statsBar"></div>
+  </header>
+
+  <nav class="tabs">
+    <button data-tab="report" class="active">Report</button>
+    <button data-tab="board">Board</button>
+    <button data-tab="matches">Matches</button>
+  </nav>
+
+  <!-- REPORT -->
+  <section class="panel active" id="panel-report">
+    <div class="report-grid">
+      <form class="card-form" id="itemForm">
+        <div class="type-toggle">
+          <button type="button" data-type="lost" class="active">🔴 I lost something</button>
+          <button type="button" data-type="found">🟢 I found something</button>
+        </div>
+
+        <label class="first">What is it?</label>
+        <input type="text" id="f-title" placeholder="e.g. Black Boat earphones" required>
+
+        <label>Category</label>
+        <select id="f-category">
+          <option value="id-card">ID card</option>
+          <option value="earphones">Earphones</option>
+          <option value="wallet">Wallet</option>
+          <option value="book">Book</option>
+          <option value="bottle">Water bottle</option>
+          <option value="charger">Charger / cable</option>
+          <option value="keys">Keys</option>
+          <option value="bag">Bag</option>
+          <option value="other">Other</option>
+        </select>
+
+        <div class="field-row">
+          <div>
+            <label>Location</label>
+            <input type="text" id="f-location" list="loc-list" placeholder="e.g. Library" required>
+            <datalist id="loc-list">
+              <option value="Library"><option value="Main Gate"><option value="Cafeteria">
+              <option value="Hostel"><option value="Sports Ground"><option value="Lecture Hall">
+              <option value="Computer Lab"><option value="Parking Lot"><option value="Auditorium">
+            </datalist>
+          </div>
+          <div>
+            <label>When</label>
+            <input type="datetime-local" id="f-time" required>
+          </div>
+        </div>
+
+        <label>Description</label>
+        <textarea id="f-desc" placeholder="Color, brand, any marks or stickers..."></textarea>
+
+        <label>Your contact (so a match can reach you)</label>
+        <input type="text" id="f-contact" placeholder="Email, phone, or room no.">
+
+        <label>Photo (optional)</label>
+        <div class="photo-drop" id="photoDrop">
+          <span id="photoDropText">Tap to upload a photo</span>
+          <input type="file" accept="image/*" id="f-photo">
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Pin to board</button>
+      </form>
+
+      <div class="hint-box">
+        <h3>How matching works</h3>
+        <p>Every time you pin an item, we compare it against everything on the opposite list — lost against found, found against lost — and score the pair on four things:</p>
+        <ul>
+          <li><b>Category</b> — same kind of object</li>
+          <li><b>Location</b> — same or nearby spot</li>
+          <li><b>Time</b> — how close together they were reported</li>
+          <li><b>Description</b> — shared words like color or brand</li>
+        </ul>
+        <p>Pairs scoring 35% or higher show up under the <b>Matches</b> tab, strongest first. This board is shared — anything you pin is visible to everyone using it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD -->
+  <section class="panel" id="panel-board">
+    <div class="filters" id="boardFilters">
+      <button data-f="all" class="active">All items</button>
+      <button data-f="lost">Lost</button>
+      <button data-f="found">Found</button>
+      <button data-f="resolved">Resolved</button>
+    </div>
+    <div class="board-grid" id="boardGrid"></div>
+  </section>
+
+  <!-- MATCHES -->
+  <section class="panel" id="panel-matches">
+    <div id="matchesList"></div>
+  </section>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
