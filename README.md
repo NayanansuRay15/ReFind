@@ -1,7 +1,7 @@
 # ReFind
-# Campus Lost & Found 2.0 🔍🎒
+# Campus Lost & Found 🔍🎒
 
-**Campus Lost & Found 2.0** is an automated web/mobile application designed to replace chaotic WhatsApp groups with an intelligent, centralized system that reconnects students with their missing belongings. 
+**Campus Lost & Found ** is an automated web/mobile application designed to replace chaotic WhatsApp groups with an intelligent, centralized system that reconnects students with their missing belongings. 
 
 By leveraging automated criteria-matching, the platform pairs lost item reports with found item reports, calculating a percentage-based match probability to help students retrieve their items quickly and securely.
 
