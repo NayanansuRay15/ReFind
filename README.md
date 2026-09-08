@@ -39,17 +39,7 @@ A dedicated digital hub where students can instantly report lost or found items.
 
 ---
 
-## 🛠️ Installation & Setup
+## 🌐 Live Website
 
-*(Provide instructions on how to clone and run your repository locally here)*
-
-```bash
-# Clone the repository
-git clone https://github.com
-
-# Navigate to the project directory
-cd campus-lost-and-found
-
-# Install dependencies
-npm install  # or pip install -r requirements.txt
-```
+Check out the live deployment of the project here:  
+👉 **[Launch ReFind App](https://nayanansuray15.github.io/ReFind/)**
